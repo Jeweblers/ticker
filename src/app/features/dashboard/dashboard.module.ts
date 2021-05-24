@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import {DashboardRoutingModule} from "./dashboard-routing.module";
+import {LayoutsModule} from "../../layouts/layouts.module";
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import {DashboardRoutingModule} from "./dashboard-routing.module";
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    LayoutsModule
   ]
 })
 export class DashboardModule { }
