@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ticker-c75e1": {
+      "hosting": {
+        "ticker": [
+          "ticker-c75e1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ticker-c75e1"
+  }
+}
