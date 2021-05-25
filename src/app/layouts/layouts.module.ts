@@ -5,15 +5,18 @@ import {MenubarModule} from 'primeng/menubar';
 import {MenuModule} from 'primeng/menu';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CenteredComponent } from './patterns/centered/centered.component';
 
 @NgModule({
   declarations: [
     VerticalComponent,
     SidebarComponent,
-    NavbarComponent
+    NavbarComponent,
+    CenteredComponent
   ],
   exports: [
-    VerticalComponent
+    VerticalComponent,
+    CenteredComponent
   ],
   imports: [
     CommonModule,

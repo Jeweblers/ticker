@@ -11,5 +11,4 @@ export class VerticalComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
