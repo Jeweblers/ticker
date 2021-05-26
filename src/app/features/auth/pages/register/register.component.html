@@ -1,5 +1,53 @@
 <app-layout-centered>
   <p-card styleClass="mt-5">
-    Registration page
+    <h1 class="is-size-3 has-text-centered mb-5">Registration page</h1>
+
+    <form [formGroup]="form" autocomplete="new-password">
+      <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input type="text" class="p-inputtext-sm input is-fullwidth"
+                 formControlName="name"
+                 autocomplete="new-password"
+                 placeholder="Enter name"
+                 pInputText/>
+          <small *ngIf="hasError('name')" class="p-error">
+            <ng-container *ngIf="getErrors('name')?.required">Name is required</ng-container>
+          </small>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input type="text" class="p-inputtext-sm input is-fullwidth"
+                 formControlName="email"
+                 autocomplete="new-password"
+                 placeholder="Enter email"
+                 pInputText/>
+          <small *ngIf="hasError('email')" class="p-error">
+            <ng-container *ngIf="getErrors('email')?.required">Email is required</ng-container>
+            <ng-container *ngIf="getErrors('email')?.email">Email is not valid</ng-container>
+          </small>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input type="password" pPassword
+                 formControlName="password"
+                 [feedback]="false"
+                 autocomplete="new-password"
+                 placeholder="Enter password"
+                 class="p-inputtext-sm input is-fullwidth"/>
+          <small *ngIf="hasError('password')" class="p-error">
+            <ng-container *ngIf="getErrors('password')?.required">Password is required</ng-container>
+          </small>
+        </div>
+      </div>
+
+      <p-button label="Register" (click)="submit()" [loading]="loading"></p-button>
+    </form>
   </p-card>
 </app-layout-centered>
